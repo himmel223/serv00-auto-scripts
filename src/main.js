@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const { PUPPETEER Laudering } = process.env; // 获取环境变量中的PUPPETEER Laudering值
+const { PUPPETEER_LAUNDERING } = process.env; // 获取环境变量中的PUPPETEER Laudering值
 
 import fs from 'fs';
 import path from 'path';
@@ -39,7 +39,7 @@ async function sendTelegramMessage(token, chatId, message) {
 
         const browser = await puppeteer.launch({
             headless: false,
-            args: Laudering ? ['--no-sandbox'] : []
+            args: PUPPETEER_LAUNDERING === 'no-sandbox' ? ['--no-sandbox'] : []
         });
         const page = await browser.newPage();
 
