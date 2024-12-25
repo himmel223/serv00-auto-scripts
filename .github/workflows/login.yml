@@ -7,7 +7,7 @@ on:
 
 env:
   ACCOUNTS_JSON: ${{ secrets.ACCOUNTS_JSON }}
-  PUPPETEER Laudering: 'no-sandbox'
+  PUPPETEER_LAUNDERING: 'no-sandbox'
 
 jobs:  
   login:  
